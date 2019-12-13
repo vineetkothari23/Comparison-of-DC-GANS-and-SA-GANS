@@ -42,24 +42,24 @@ This paper on [**SA Gans**](https://arxiv.org/abs/1805.08318) was published in J
 #### Train/ test
 1. Clone the repository
 ```
-$ git clone https://github.com/MicroprocessorX069/Generalized-pix2pix-GAN-API.git
-$ cd Generalized-pix2pix-GAN-API
+$ git clone https://github.com/MicroprocessorX069/Comparison-of-DC-GANS-and-SA-GANS.git
+$ cd Comparison-of-DC-GANS-and-SA-GANS
 ```
 3. Train
+For more parameter tuning, check paramters.py
 (i) Train
 ```
-$ python python train.py --root_dir "./" --version "1.0" --batch_size 64 --input_width 32 --input_height 32 
+$ python python sagan_train.py --root_dir "./" --version "1.0" --batch_size 64 --imsize 64 --d_iter 10 
+or
+$ python python dcgan_train.py --root_dir "./" --version "1.0" --batch_size 64 --nz 100
 ```
 (ii) Test
-'''
-$ python python test.py --root_dir "./" --version "1.0" 
-'''
-4. Enjoy the results
 ```
-$ cd output/epoch
-or
-$ cd report
+$ python python dcgan_test.py 
+or 
+$ python python sagan_test.py 
 ```
+4. The generated image is saved as 'DCGAN_test.png' or 'SAGAN_test.png'
 
 #### Using a pretrained model weights
 Download the model weights as .ckpt file in "./model/" and hit the same commands to train and test with the correct root directory.
