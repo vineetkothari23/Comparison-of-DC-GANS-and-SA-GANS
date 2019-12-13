@@ -10,10 +10,10 @@ This paper on [**DC Gans**](https://arxiv.org/abs/1511.06434) was published in N
 This paper on [**SA Gans**](https://arxiv.org/abs/1805.08318) was published in June 2019 by **authors Han Zhang, Ian Goodfellow, Dimitris Metaxas, Augustus Odena.**
 
 #### Citations:
-- DC Gan: https://arxiv.org/abs/1511.06434
-- SA Gan: https://arxiv.org/abs/1805.08318
-- Wasserstein loss: https://arxiv.org/pdf/1701.07875.pdf
-- Frechet Inception score: https://arxiv.org/pdf/1706.08500.pdf
+ | [DC Gan](https://arxiv.org/abs/1511.06434)
+ | [SA Gan](https://arxiv.org/abs/1805.08318)
+ | [Wasserstein loss](https://arxiv.org/pdf/1701.07875.pdf)
+ | [Frechet Inception score](https://arxiv.org/pdf/1706.08500.pdf)
 
 ## Broader look out:
 - DC GAN: The DC Gan is an **unsupervised deep convolutional GAN** which generates images based on random noise.
@@ -33,30 +33,11 @@ This paper on [**SA Gans**](https://arxiv.org/abs/1805.08318) was published in J
 
 ![SA GAN Architecture](https://miro.medium.com/max/2204/1*H29pojIh1fvscvX04gF2Xg.png)
 
-
-### Prerequisites
 ### Usage
 
-#### Installation
 #### Requirements
 - Python 3.5+
 - PyTorch 0.3.0
- 
-#### Directory structure
-The directory structure is followed as 
-```
-.
-├── ...
-├── version_no                    # Version of different models and training process
-│   ├── model          # saved model checkpoint files
-│   ├── report         # reporting of final training, validation loss and other metrics
-│   └── output          # Output directory
-│       └── epoch                    # Storing the training epoch images
-├── data                    # Dataset of images (Optional)
-├── res                # Resources directory
-│    └── Helvetica                    # Font file to generate paired images for training (optional) 
-└── ...
-```
 
 #### Train/ test
 1. Clone the repository
@@ -83,13 +64,6 @@ $ cd report
 #### Using a pretrained model weights
 Download the model weights as .ckpt file in "./model/" and hit the same commands to train and test with the correct root directory.
 
-## Results
-![Training gif](https://github.com/MicroprocessorX069/Generalized-pix2pix-GAN-API/blob/master/training_process.GIF)
-
-## Implementation details
-- [Theoritical details](docs/CONTRIBUTING.md)
-
-
 ## Documentation
 
 ### Theoritical details
@@ -105,23 +79,22 @@ Download the model weights as .ckpt file in "./model/" and hit the same commands
 - [Code structure](docs/CONTRIBUTING.md)
 - [Class activation mappings](documentation/cam.md)
 - [Distributed training](docs/CONTRIBUTING.md)
-- [Docker](docs/CONTRIBUTING.md)'
+- [Docker](docs/CONTRIBUTING.md)
 - [Results](documentation/results.md)
 
 ### Issues
 - [Mode collapse](documentation/regularization.md)
-- [Modules](docs/CONTRIBUTING.md)
-- [Data](docs/CONTRIBUTING.md)
-- [Architecture](docs/CONTRIBUTING.md)
-- [Code structure](docs/CONTRIBUTING.md)
-- [Class activation mappings](documentation/cam.md)
-- [Distributed training](docs/CONTRIBUTING.md)
-- [Docker](docs/CONTRIBUTING.md)
 
 ## Related projects
+- [pix2pix: Image to Image translation network](https://github.com/MicroprocessorX069/Generalized-pix2pix-GAN-API)
+- [Pneumonia detection using deep convolutional network](https://github.com/MicroprocessorX069/Pneumonia-detection-Dense-Conv-Net)
 
 ## Acknowledgements
 
+1. DC Gan: https://arxiv.org/abs/1511.06434
+2. SA Gan: https://arxiv.org/abs/1805.08318
+3. Wasserstein loss: https://arxiv.org/pdf/1701.07875.pdf
+4. Frechet Inception score: https://arxiv.org/pdf/1706.08500.pdf
 
 
 
