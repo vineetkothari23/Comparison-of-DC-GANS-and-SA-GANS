@@ -2,14 +2,23 @@
 Based on CIFAR Dataset in Pytorch.
 
 ## About:
-This is a pytorch implementation of classification of chest X-rays as infected with pneumonia or not. This is examined by radiologists manually for air cavities and lumps. The model also outputs a heat map indicating the areas in the xray dominant in leading to the prediction.
-The paper [CheXNet: Radiologist-Level Pneumonia Detection on Chest X-Rays with Deep Learning (https://arxiv.org/abs/1711.05225)] was published in Dec 2017 by Pranav Rajpurkar and Jeremy Irvin.
+A generalized pytorch implementation for image generation task for any dataset, using Deep convolutional generative adversarial network and Self attention generative adversarial network.
+The cSAW GAN stands for conditional SAGAN implemented with Wasserstein loss.
 
-Citations:
-https://arxiv.org/abs/1711.05225
+Following are the papers:
+This paper on [**DC Gans**](https://arxiv.org/abs/1511.06434) was published in November 2015 by **authors Alec Radford, Luke Metz, Soumith Chintala**
+This paper on [**SA Gans**](https://arxiv.org/abs/1805.08318) was published in June 2019 by **authors Han Zhang, Ian Goodfellow, Dimitris Metaxas, Augustus Odena.**
+
+#### Citations:
+- DC Gan: https://arxiv.org/abs/1511.06434
+- SA Gan: https://arxiv.org/abs/1805.08318
+- Wasserstein loss: https://arxiv.org/pdf/1701.07875.pdf
+- Frechet Inception score: https://arxiv.org/pdf/1706.08500.pdf
 
 ## Broader look out:
-The 121 layered convolutional neural network has acheived the state of the art detection of pneumonia over manual detection by human radiologist, compared by F1 scores. It uses a dataset of 100000 Chest X-rays 14 dataset annotated by four radiologists.
+- DC GAN: The DC Gan is an **unsupervised deep convolutional GAN** which generates images based on random noise.
+- cSAW GAN: The conditional Self-Attention Generative Adversarial Network (cSAGAN) generates images allowing **attention-driven, long-   range dependency modeling** using **Wasserstein loss**.
+- The comparison of the two algorithms is done using various metrics, but the major metric is [**Frechet Inception score**].
 
 ### Architecture
 
@@ -64,15 +73,10 @@ Download the model weights as .ckpt file in "./model/" and hit the same commands
 
 ## Results
 ![Training gif](https://github.com/MicroprocessorX069/Generalized-pix2pix-GAN-API/blob/master/training_process.GIF)
+
 ## Implementation details
 - [Theoritical details](docs/CONTRIBUTING.md)
-- [Modules](docs/CONTRIBUTING.md)
-- [Data](docs/CONTRIBUTING.md)
-- [Architecture](docs/CONTRIBUTING.md)
-- [Code structure](docs/CONTRIBUTING.md)
-- [Class activation mappings](documentation/cam.md)
-- [Distributed training](docs/CONTRIBUTING.md)
-- [Docker](docs/CONTRIBUTING.md)
+
 
 ## Documentation
 
@@ -81,6 +85,16 @@ Download the model weights as .ckpt file in "./model/" and hit the same commands
 - [Spectral normalization: ](documentation/spectral.md)
 - [Conditional batch normalization](documentation/conditional_bn.md)
 - [FID metric: Better way to compare similarity of two images](documentation/fid.md)
+
+### Implementation
+- [Modules](documentation/modules.md)
+- [Data](documentation/dataset.md)
+- [Architecture](documentation/CONTRIBUTING.md)
+- [Code structure](docs/CONTRIBUTING.md)
+- [Class activation mappings](documentation/cam.md)
+- [Distributed training](docs/CONTRIBUTING.md)
+- [Docker](docs/CONTRIBUTING.md)'
+- [Results](documentation/results.md)
 
 ### Issues
 - [Mode collapse](documentation/regularization.md)
@@ -93,6 +107,7 @@ Download the model weights as .ckpt file in "./model/" and hit the same commands
 - [Docker](docs/CONTRIBUTING.md)
 
 ## Related projects
+
 ## Acknowledgements
 
 
