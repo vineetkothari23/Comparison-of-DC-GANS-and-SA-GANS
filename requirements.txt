@@ -1,0 +1,10 @@
+numpy
+torch
+torchvision
+Pillow
+matplotlib
+bokeh
+threading
+tornado
+pickle
+tqdm
